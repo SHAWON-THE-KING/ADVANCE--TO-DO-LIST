@@ -70,10 +70,10 @@ h1 {
 
 
 ul {
-    /* list-style: none; */
+    list-style: none;
     margin-top: 30px;
     padding-right: 12px;
-    max-height: 320px;
+    height: 320px;
     overflow-y: auto;
     scrollbar-width: thin;
     scroll-behavior: smooth;
@@ -118,7 +118,7 @@ li.completed {
     background: rgb(0, 255, 140);
 }
 
-/* ==== Delete Button ==== */
+
 .deleteBtn {
     position: absolute;
     top: 0;
@@ -155,4 +155,9 @@ li.completed {
 }
 .deleteBtn:hover {
     background: #ff3300;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
 }
