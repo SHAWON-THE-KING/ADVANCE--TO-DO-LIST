@@ -1,0 +1,158 @@
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #74baffb4, #a29bfe, #81ececae);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+
+.todo-container {
+    background: rgba(255, 255, 255, 0.468);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgb(255, 255, 255);
+    width: 480px;
+    padding: 30px 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+    text-align: center;
+}
+
+
+h1 {
+    color: #f9e5e5;
+    font-weight: 600;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 180);
+    overflow: hidden;
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 12px 18px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#taskInput::placeholder {
+    color: #666;
+}
+
+#addBtn {
+    background: linear-gradient(135deg, #6c5ce7, #00cec9);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#addBtn:hover {
+    background: linear-gradient(135deg, #00cec9, #6c5ce7);
+    transform: scale(1.05);
+}
+
+
+ul {
+    /* list-style: none; */
+    margin-top: 30px;
+    padding-right: 12px;
+    max-height: 320px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+}
+
+li {
+    position: relative;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 12px 16px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-left: -35px;
+    font-size: 17px;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    transition: 0.25s;
+    cursor: pointer;
+    animation: fadeInItem 0.4s;
+}
+
+@keyframes fadeInItem {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+li:hover {
+    transform: scale(1.02);
+}
+
+li.completed {
+    text-decoration: line-through;
+    background: rgb(0, 255, 140);
+}
+
+/* ==== Delete Button ==== */
+.deleteBtn {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    transform: translate(50%, 50%);
+    background: #ff4d4dc4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.edit-btn {
+    position: absolute;
+    top: 0;
+    right: 65px;
+    transform: translate(50%, 50%);
+    background: rgba(137, 43, 226, 0.703);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+
+.edit-btn:hover {
+    background: #0004ff;
+}
+.deleteBtn:hover {
+    background: #ff3300;
+}
